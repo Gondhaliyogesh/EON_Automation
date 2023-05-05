@@ -1,0 +1,15 @@
+package com.eon.po;
+
+import com.eon.utils.BrowserManger;
+
+public class PO_LoginPage {
+	
+	public static void main(String[] args) {
+		
+		BrowserManger bm=new BrowserManger();
+		bm.getDriver();
+		
+		
+	}
+
+}

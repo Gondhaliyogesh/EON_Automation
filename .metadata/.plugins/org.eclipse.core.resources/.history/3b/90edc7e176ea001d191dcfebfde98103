@@ -1,0 +1,21 @@
+package com.eon.tc;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+import com.eon.po.PO_LoginPage;
+import com.eon.utils.BrowserManger;
+
+public class TC_LoginPage {
+	
+	WebDriver driver;
+	PO_LoginPage loginPage;
+	
+	
+	@BeforeMethod()
+	public void Init()
+	{
+		driver=BrowserManger.getDriver();
+	}
+
+}

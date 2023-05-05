@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EON/src/test/resources/config&apos; to &apos;configFile&apos;" description="Rename resource &apos;config&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/config" name="configFile" stamp="1683200404280" updateReferences="true"/>
+</session>

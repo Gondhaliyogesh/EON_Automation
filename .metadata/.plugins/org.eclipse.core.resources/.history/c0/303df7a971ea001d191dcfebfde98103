@@ -1,0 +1,10 @@
+package com.eon.utils;
+
+public class BrowserManger 
+{
+	public static void Initilization()
+	{
+		
+	}
+
+}

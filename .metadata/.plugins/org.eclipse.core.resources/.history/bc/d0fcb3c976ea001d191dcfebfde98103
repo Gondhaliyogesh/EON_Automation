@@ -1,0 +1,12 @@
+package com.eon.tc;
+
+import org.openqa.selenium.WebDriver;
+
+import com.eon.po.PO_LoginPage;
+
+public class TC_LoginPage {
+	
+	WebDriver driver;
+	PO_LoginPage loginPage;
+
+}

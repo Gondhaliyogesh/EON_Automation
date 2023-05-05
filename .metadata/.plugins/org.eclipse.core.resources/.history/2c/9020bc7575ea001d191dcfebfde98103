@@ -1,0 +1,12 @@
+package com.eon.po;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class PO_LoginPage {
+	
+	@FindBy(how = How.ID, using="id_username")
+	private WebElement userName;
+	
+}

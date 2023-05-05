@@ -1,0 +1,23 @@
+package com.eon.utils;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+
+public class BrowserManger 
+{
+	public static WebDriver driver;
+	static String Browser="chrome";
+	public static void Initilization()
+	{
+		if(Browser.equalsIgnoreCase("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+			
+		}
+	}
+
+}

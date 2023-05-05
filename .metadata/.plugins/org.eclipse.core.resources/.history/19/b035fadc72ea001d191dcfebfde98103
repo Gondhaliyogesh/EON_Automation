@@ -1,0 +1,45 @@
+package com.eon.utils;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BrowserManger 
+{
+	public static WebDriver driver;
+	static String Browser="chrome";
+	public static void Initilization()
+	{
+		if(Browser.equalsIgnoreCase("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+			
+		}
+		else if(Browser.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
+		}
+		else if(Browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}
+		else {
+			System.out.println("Matching Browser Not Found");
+			
+		}
+		
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.get("https://qa.app.eongroup.co/");
+	}
+
+}
